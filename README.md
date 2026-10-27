@@ -1,8 +1,11 @@
 ### BarinasRoute - Plataforma de Gestión de Movilidad Urbana
 
 **Asignatura:** Desarrollo de Aplicaciones I  
+
 **Estudiante:** Edgarlyn Parra 
+
 **Sección:** FS-01
+
 **Profesor:** Alex Barrios  
 
 ---
@@ -62,30 +65,48 @@ Verificación de la aplicación ejecutándose de forma integral en su entorno Do
 Validación final frente a los objetivos iniciales del proyecto. Corrobora que la plataforma oriente al usuario de forma clara sobre el transporte de Barinas y permita consultar información vial de forma intuitiva.
 
 
-Despliegue Local con Docker
-1.	Clonar el repositorio:
+---
 
+```markdown
+## Despliegue Local con Docker
 
-Bash
-git clone https://github.com/Joiset/proyecto_web_JOI.git
+**1. Clonar el repositorio:**
+```bash
+git clone [https://github.com/Joiset/proyecto_web_JOI.git](https://github.com/Joiset/proyecto_web_JOI.git)
 cd proyecto_web_JOI
-2.	Construir la imagen del proyecto:
 
+```
 
-Bash
+**2. Construir la imagen del proyecto:**
+
+```bash
 docker compose build
-3.	Ejecutar migraciones de la base de datos:
 
+```
 
-Bash
+**3. Ejecutar migraciones de la base de datos:**
+
+```bash
 docker compose run --rm web python manage.py migrate
-4.	Crear usuario administrador:
 
+```
 
-Bash
+**4. Crear usuario administrador:**
+
+```bash
 docker compose run --rm web python manage.py createsuperuser
-5.	Iniciar el servidor:
 
+```
 
-Bash
+**5. Iniciar el servidor:**
+
+```bash
 docker compose up
+
+```
+
+La aplicación quedará disponible en el navegador en `http://localhost:8000`.
+
+```
+
+
