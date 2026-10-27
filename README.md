@@ -16,25 +16,33 @@ La metodología en V es un modelo de desarrollo secuencial donde cada fase de di
                     -------------> [ CODIFICACIÓN ] <-----
 ```
 
+## Modelo en V: Ciclo de Vida del Software y Estrategia de Pruebas
+
 ### 1. Análisis de Requisitos (Requirement Gathering)
-* **Definición:** Es la fase inicial donde se recopilan, analizan y documentan las necesidades del usuario final y las reglas del negocio.
-* **Entregables:** Documento de Especificación de Requisitos de Software (SRS), historias de usuario y matriz de trazabilidad.
-* **Fase de prueba asociada:** Pruebas de Aceptación (validan que el sistema resuelva el problema real del usuario).
+Esta fase inicial se centra en recopilar, examinar y documentar detalladamente las necesidades del usuario final y las reglas de negocio de la aplicación. Genera como entregables principales el Documento de Especificación de Requisitos de Software (SRS), las historias de usuario y la matriz de trazabilidad. Su fase de prueba asociada son las Pruebas de Aceptación, las cuales validan formalmente que la solución desarrollada resuelva los problemas reales planteados por los usuarios.
 
 ### 2. Análisis del Sistema (System Analysis)
-* **Definición:** Traducción de las necesidades del usuario en especificaciones técnicas y funcionales del sistema. Se definen las interfaces de entrada/salida y los límites de la aplicación.
-* **Entregables:** Casos de uso, diagramas de flujo de datos y especificaciones de comportamiento general del software.
-* **Fase de prueba asociada:** Pruebas del Sistema (validan la funcionalidad completa de extremo a extremo).
+En esta etapa se traducen las necesidades recabadas del usuario a especificaciones técnicas y funcionales estructuradas, delimitando los alcances y las interfaces de entrada y salida del software. Entrega casos de uso, diagramas de flujo de datos y descripciones del comportamiento global del sistema. Se vincula de forma directa con las Pruebas del Sistema, encargadas de comprobar el funcionamiento integral de la aplicación de extremo a extremo.
 
 ### 3. Diseño de Software / Arquitectura (Software Design)
-* **Definición:** Se establece la estructura tecnológica general del software, la relación entre capas (frontend, backend, base de datos) y la infraestructura de despliegue.
-* **Entregables:** Diagrama de componentes, definición del stack tecnológico (Python, Django, Vite.js, Docker y base de datos relacional) y protocolos de comunicación e interfaces.
-* **Fase de prueba asociada:** Pruebas de Integración (comprueban la comunicación fluida entre módulos y servicios externos).
+Aquí se establece la estructura tecnológica general del proyecto, definiendo la interacción entre las distintas capas (frontend, backend y base de datos) y la infraestructura requerida para su despliegue. Sus entregables abarcan diagramas de componentes, la selección y justificación del stack tecnológico (Python, Django, Bootstrap 5, Docker y base de datos relacional) y la definición de protocolos de comunicación. Se asocia con las Pruebas de Integración, cuyo objetivo es verificar la comunicación fluida entre módulos internos y servicios externos.
 
 ### 4. Diseño de Módulos (Module Design)
-* **Definición:** Especificación detallada de bajo nivel de cada componente individual del sistema (lógica interna, algoritmos y estructuras de almacenamiento).
-* **Entregables:** Esquemas de bases de datos (`models.py`), lógica de control (`views.py`), validaciones (`forms.py`) y mapeo de rutas (`urls.py`).
-* **Fase de prueba asociada:** Pruebas Unitarias (validan funciones, clases y métodos de forma aislada).
+Consiste en la especificación técnica de bajo nivel para cada componente individual, abordando su lógica interna, algoritmos y estructuras de almacenamiento de datos. Como entregables produce los esquemas de base de datos (`models.py`), la lógica de control (`views.py`), los formularios de validación (`forms.py`) y el direccionamiento de rutas (`urls.py`). Su fase de prueba correspondiente son las Pruebas Unitarias, destinadas a corroborar que cada función, clase y método opere correctamente de manera aislada.
 
 ### Punto de Inflexión: Codificación (Coding)
-* Es la fase donde se traduce todo el diseño previo a código fuente ejecutable, aplicando buenas prácticas de programación, control de versiones y entornos de desarrollo aislados.
+Representa el momento donde se materializan todas las especificaciones y diseños previos en código fuente ejecutable, implementando buenas prácticas de desarrollo, gestión de control de versiones y entornos de ejecución aislados mediante contenedores Docker.
+
+---
+
+### 5. Pruebas Unitarias (Unit Testing)
+Corresponde a la primera etapa de validación tras la codificación, enfocada en examinar bloques de código aislados e independientes. Valida la lógica interna de métodos en modelos, señales automáticas de usuario, funciones de cálculo geoespacial y validaciones de formularios antes de que interactúen con el resto del sistema.
+
+### 6. Pruebas de Integración (Integration Testing)
+Verifica que los módulos individuales interactúen de forma correcta y armónica entre sí al combinarse. Asegura que la capa de autenticación transmita los roles adecuadamente hacia las vistas, que las consultas al ORM sincronicen con el motor de base de datos dentro del contenedor y que los endpoints suministren las estructuras de datos esperadas por el visor cartográfico.
+
+### 7. Pruebas del Sistema (System Testing)
+Evalúa el comportamiento global de la plataforma ejecutándose de manera integral en su entorno contenerizado. Comprueba flujos completos de inicio a fin, tales como el registro de ciudadanos, la asignación de permisos según el perfil, la emisión de alertas de contingencia vial y las respuestas del servidor ante peticiones concurrentes en el puerto expuesto.
+
+### 8. Pruebas de Aceptación (User Acceptance Testing - UAT)
+Constituye la fase final de verificación donde se evalúa el software frente a los objetivos y requerimientos planteados originalmente por los usuarios y la comunidad. Valida que BarinasRoute cumpla con orientar efectivamente sobre las rutas urbanas, advertir con precisión las bifurcaciones y permitir una interacción fluida y accesible desde cualquier navegador.
