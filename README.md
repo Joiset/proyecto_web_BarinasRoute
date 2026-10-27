@@ -26,60 +26,66 @@ La metodología en V es un modelo de desarrollo secuencial donde cada fase de di
                     -------------> [ CODIFICACIÓN ] <-----
 
 ```
-1. Análisis de Requisitos (Requirement Gathering)
+### 1. Análisis de Requisitos (Requirement Gathering)
 Fase inicial donde se identificaron las necesidades del usuario y la dinámica del transporte público en Barinas (rutas, desvíos y tarifas). Se documentan los requerimientos funcionales, historias de usuario y la matriz de trazabilidad. Su fase de prueba asociada son las Pruebas de Aceptación, encargadas de confirmar que el sistema resuelva los problemas reales de movilidad.
 
-2. Análisis del Sistema (System Analysis)
+
+### 2. Análisis del Sistema (System Analysis)
 Traducción de los requisitos del usuario a especificaciones técnicas y operativas del software, definiendo límites del sistema, casos de uso y diagramas de flujo. Se vincula con las Pruebas del Sistema, las cuales validan el comportamiento global de la aplicación de extremo a extremo.
 
-3. Diseño de Software / Arquitectura (Software Design)
+
+### 3. Diseño de Software / Arquitectura (Software Design)
 Definición de la arquitectura tecnológica general: estructura modular desacoplada en Django, persistencia en base de datos relacional y contenedorización de servicios con Docker. Se asocia con las Pruebas de Integración, destinadas a comprobar la comunicación correcta entre los módulos del sistema y servicios externos.
 
-4. Diseño de Módulos (Module Design)
+
+### 4. Diseño de Módulos (Module Design)
 Especificación de bajo nivel de cada componente individual: definición de tablas y esquemas relacionales (models.py), lógica de control (views.py), validación de entradas (forms.py) y mapeo de endpoints (urls.py). Su fase de prueba correspondiente son las Pruebas Unitarias, verificando que las funciones y métodos operen correctamente de forma aislada.
 
-Punto de Inflexión: Codificación (Coding)
+
+### 5. Punto de Inflexión: Codificación (Coding)
 Etapa de implementación técnica donde se construyen los módulos en código Python/Django sobre Docker, aplicando estándares limpios de desarrollo y control de versiones con Git.
 
-5. Pruebas Unitarias (Unit Testing)
+
+### 6. Pruebas Unitarias (Unit Testing)
 Primera fase de verificación tras la codificación. Evalúa de forma aislada la lógica de los métodos de modelos, la asignación automática de perfiles por señales y las validaciones de formularios.
 
-6. Pruebas de Integración (Integration Testing)
+
+### 7. Pruebas de Integración (Integration Testing)
 Comprueba el trabajo conjunto entre módulos: valida que el control de acceso por roles proteja adecuadamente las vistas, que las transacciones guarden en la base de datos dentro del contenedor y que el visor cartográfico reciba los datos esperados.
 
-7. Pruebas del Sistema (System Testing)
+
+### 8. Pruebas del Sistema (System Testing)
 Verificación de la aplicación ejecutándose de forma integral en su entorno Docker. Evalúa flujos completos como inicio de sesión, navegación de rutas según el rol y respuesta del servidor en el puerto asignado.
 
-8. Pruebas de Aceptación (User Acceptance Testing - UAT)
+
+### 9. Pruebas de Aceptación (User Acceptance Testing - UAT)
 Validación final frente a los objetivos iniciales del proyecto. Corrobora que la plataforma oriente al usuario de forma clara sobre el transporte de Barinas y permita consultar información vial de forma intuitiva.
 
+
 Despliegue Local con Docker
-Clonar el repositorio:
+1.	Clonar el repositorio:
+
 
 Bash
 git clone https://github.com/Joiset/proyecto_web_JOI.git
 cd proyecto_web_JOI
-Construir la imagen del proyecto:
+2.	Construir la imagen del proyecto:
+
 
 Bash
 docker compose build
-Ejecutar migraciones de la base de datos:
+3.	Ejecutar migraciones de la base de datos:
+
 
 Bash
 docker compose run --rm web python manage.py migrate
-Crear usuario administrador:
+4.	Crear usuario administrador:
+
 
 Bash
 docker compose run --rm web python manage.py createsuperuser
-Iniciar el servidor:
+5.	Iniciar el servidor:
+
 
 Bash
 docker compose up
-La aplicación quedará disponible en el navegador en http://localhost:8000.
-
-
-Guárdalo con `Ctrl + S`, ejecuta en la terminal:
-```powershell
-git add README.md
-git commit -m "docs: Correccion de formato y comandos de despliegue en README"
-git push
