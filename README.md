@@ -105,7 +105,7 @@ docker compose up
 
 ```
 
-La aplicación quedará disponible en el navegador en `http://localhost:8000`.
+disponible en el navegador  `http://localhost:8000`.
 
 ```
 
