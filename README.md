@@ -1,16 +1,18 @@
-```markdown
-# BarinasRoute - Plataforma de Gestión de Movilidad Urbana
+### BarinasRoute - Plataforma de Gestión de Movilidad Urbana
 
 **Asignatura:** Desarrollo de Aplicaciones Web I  
-**Estudiante:** Edgarlyn Parra[cite: 5]  
-**Sección:** FS-01[cite: 5]  
+**Estudiante:** Edgarlyn Parra 
+**Sección:** FS-01
 **Profesor:** Alex Barrios  
 
 ---
 
-## Metodología de Desarrollo en V (Ciclo de Vida y Estrategia de Pruebas)
+### Metodología de Desarrollo en V (Ciclo de Vida y Estrategia de Pruebas)
 
 La metodología en V es un modelo de desarrollo secuencial donde cada fase de diseño y especificación (rama descendente) se corresponde directamente con un nivel de pruebas (rama ascendente), teniendo a la codificación como el punto de inflexión.
+
+```markdown
+
 
 ```text
 [ Análisis de Requisitos ]  ---------------------------->  [ Pruebas de Aceptación ]
