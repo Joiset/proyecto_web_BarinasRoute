@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Panel - BarinasRoute{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="fw-bold mb-0">Panel de Control</h2>
+        <span class="badge bg-secondary">Rol: {{ user.profile.get_role_display }}</span>
+    </div>
+    <span class="text-muted">Conectado como <strong>{{ user.username }}</strong></span>
+</div>
+
+{% if rol == 'administrador' %}
+<div class="alert alert-primary shadow-sm" role="alert">
+    <h4 class="alert-heading"><i class="bi bi-person-gear me-2"></i>Módulo de Administración</h4>
+    <p>Tienes acceso total para gestionar usuarios, asignar roles de gestores y auditar el sistema.</p>
+    <hr>
+    <a href="/admin/" class="btn btn-primary" target="_blank">Ir a Django Admin</a>
+</div>
+{% elif rol == 'gestor' %}
+<div class="alert alert-info shadow-sm" role="alert">
+    <h4 class="alert-heading"><i class="bi bi-clipboard2-check me-2"></i>Panel del Gestor de Transporte</h4>
+    <p>Aquí puedes validar los reportes de incidentes viales emitidos por la ciudadanía y actualizar los estados de las líneas.</p>
+</div>
+{% else %}
+<div class="alert alert-success shadow-sm" role="alert">
+    <h4 class="alert-heading"><i class="bi bi-person-circle me-2"></i>Portal Ciudadano</h4>
+    <p>Desde aquí puedes guardar tus rutas habituales y enviar reportes viales sobre el estado del transporte.</p>
+</div>
+{% endif %}
+{% endblock %}

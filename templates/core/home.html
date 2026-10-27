@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Inicio - BarinasRoute{% endblock %}
+
+{% block content %}
+<div class="p-5 mb-4 bg-white rounded-3 shadow-sm border">
+    <div class="container-fluid py-2">
+        <h1 class="display-5 fw-bold text-primary">BarinasRoute</h1>
+        <p class="col-md-8 fs-5 text-muted">
+            Plataforma de monitoreo y reporte colaborativo de rutas y transporte urbano para el Estado Barinas.
+        </p>
+        {% if not user.is_authenticated %}
+            <a class="btn btn-primary btn-lg" href="{% url 'register' %}">Crear Cuenta Ciudadana</a>
+            <a class="btn btn-outline-secondary btn-lg ms-2" href="{% url 'login' %}">Acceder</a>
+        {% else %}
+            <a class="btn btn-success btn-lg" href="{% url 'dashboard' %}">Entrar a mi Panel</a>
+        {% endif %}
+    </div>
+</div>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title fw-bold text-dark"><i class="bi bi-geo-alt-fill text-danger me-2"></i>Rutas y Paradas</h5>
+                <p class="card-text text-muted">Consulta el trazado de las principales líneas urbanas que conectan Alto Barinas, Centro, Cuatricentenaria y Mi Jardín.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title fw-bold text-dark"><i class="bi bi-megaphone-fill text-warning me-2"></i>Reportes en Tiempo Real</h5>
+                <p class="card-text text-muted">Los usuarios registrados alertan sobre congestiones, paradas inhabilitadas y desvíos de vía pública.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body">
+                <h5 class="card-title fw-bold text-dark"><i class="bi bi-shield-check text-success me-2"></i>Validación Oficial</h5>
+                <p class="card-text text-muted">Los gestores de transporte validan los avisos de contingencia y actualizan las frecuencias de paso.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

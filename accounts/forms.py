@@ -1,0 +1,16 @@
+from django import forms
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+
+class CustomUserRegisterForm(UserCreationForm):
+    """
+    Formulario personalizado que extiende UserCreationForm para capturar
+    nombre, apellido y correo electrónico al registrar un usuario.
+    """
+    first_name = forms.CharField(max_length=30, required=True, label="Nombre")
+    last_name = forms.CharField(max_length=30, required=True, label="Apellido")
+    email = forms.EmailField(max_length=254, required=True, label="Correo Electrónico")
+
+    class Meta:
+        model = User
+        fields = ['username', 'first_name', 'last_name', 'email']
