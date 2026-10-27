@@ -102,10 +102,13 @@ docker compose run --rm web python manage.py createsuperuser
 ```bash
 docker compose up
 
+```
 
+disponible en el navegador 
 
-disponible en el navegador  `http://localhost:8000`.
+```bash
+ `http://localhost:8000`.
 
-
+```
 
 
