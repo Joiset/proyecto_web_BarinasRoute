@@ -68,7 +68,6 @@ Validación final frente a los objetivos iniciales del proyecto. Corrobora que l
 ---
 
 ```markdown
-## Despliegue Local con Docker
 
 **1. Clonar el repositorio:**
 ```bash
@@ -107,6 +106,6 @@ docker compose up
 
 disponible en el navegador  `http://localhost:8000`.
 
-```
+
 
 
