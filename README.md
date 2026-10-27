@@ -4,15 +4,17 @@
 
 La metodología en V es un modelo de desarrollo secuencial donde cada fase de diseño y especificación (rama descendente) se corresponde directamente con un nivel de pruebas (rama ascendente), teniendo a la codificación como el punto de inflexión.
 
-[ Análisis de Requisitos ]  ------------------>  [ Pruebas de Aceptación ]
-\                                            /
-[ Análisis del Sistema ]  ------------------>  [ Pruebas de Sistema ]
-\                                        /
-[ Diseño de Software / Arquitectura ]  --->  [ Pruebas de Integración ]
-\                                    /
-[ Diseño de Módulos ]  ----------->  [ Pruebas Unitarias ]
-\                            /
------> [ CODIFICACIÓN ] <---
+```text
+[ Análisis de Requisitos ]  ---------------------------->  [ Pruebas de Aceptación ]
+          \                                                              /
+   [ Análisis del Sistema ]  --------------------------->  [ Pruebas de Sistema ]
+             \                                                 /
+      [ Diseño de Software ]  -------------------------->  [ Pruebas de Integración ]
+                \                                            /
+         [ Diseño de Módulos ]  ------------------------>  [ Pruebas Unitarias ]
+                   \                                      /
+                    -------------> [ CODIFICACIÓN ] <-----
+```
 
 ### 1. Análisis de Requisitos (Requirement Gathering)
 * **Definición:** Es la fase inicial donde se recopilan, analizan y documentan las necesidades del usuario final y las reglas del negocio.
