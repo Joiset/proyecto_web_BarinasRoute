@@ -104,7 +104,7 @@ docker compose up
 
 ```
 
-disponible en el navegador 
+**disponible en el navegador:** 
 
 ```bash
  `http://localhost:8000`.
