@@ -14,7 +14,7 @@ La metodología en V es un modelo de desarrollo secuencial donde cada fase de di
 ```markdown
 
 
-```text
+```
 [ Análisis de Requisitos ]  ---------------------------->  [ Pruebas de Aceptación ]
           \                                                               /
    [ Análisis del Sistema ]  --------------------------->  [ Pruebas de Sistema ]
