@@ -67,10 +67,8 @@ Validación final frente a los objetivos iniciales del proyecto. Corrobora que l
 
 ---
 
-```markdown
 
-
-### **1. Clonar el repositorio:**
+ **1. Clonar el repositorio:**
 
 ```bash
 git clone [https://github.com/Joiset/proyecto_web_JOI.git](https://github.com/Joiset/proyecto_web_JOI.git)
