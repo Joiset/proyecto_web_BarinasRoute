@@ -16,8 +16,6 @@ La metodología en V es un modelo de desarrollo secuencial donde cada fase de di
                     -------------> [ CODIFICACIÓN ] <-----
 ```
 
-## Modelo en V: Ciclo de Vida del Software y Estrategia de Pruebas
-
 ### 1. Análisis de Requisitos (Requirement Gathering)
 Esta fase inicial se centra en recopilar, examinar y documentar detalladamente las necesidades del usuario final y las reglas de negocio de la aplicación. Genera como entregables principales el Documento de Especificación de Requisitos de Software (SRS), las historias de usuario y la matriz de trazabilidad. Su fase de prueba asociada son las Pruebas de Aceptación, las cuales validan formalmente que la solución desarrollada resuelva los problemas reales planteados por los usuarios.
 
