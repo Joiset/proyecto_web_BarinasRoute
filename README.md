@@ -69,7 +69,9 @@ Validación final frente a los objetivos iniciales del proyecto. Corrobora que l
 
 ```markdown
 
-**1. Clonar el repositorio:**
+
+### **1. Clonar el repositorio:**
+
 ```bash
 git clone [https://github.com/Joiset/proyecto_web_JOI.git](https://github.com/Joiset/proyecto_web_JOI.git)
 cd proyecto_web_JOI
@@ -102,7 +104,7 @@ docker compose run --rm web python manage.py createsuperuser
 ```bash
 docker compose up
 
-```
+
 
 disponible en el navegador  `http://localhost:8000`.
 
