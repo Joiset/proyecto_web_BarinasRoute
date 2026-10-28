@@ -6,7 +6,7 @@
 
 **Sección:** FS-01
 
-**Profesor:** Alex Barrios  
+**Profesor:** Rafael Barrios  
 
 ---
 
@@ -30,7 +30,7 @@ La metodología en V es un modelo de desarrollo secuencial donde cada fase de di
 
 ```
 ### 1. Análisis de Requisitos (Requirement Gathering)
-Fase inicial donde se identificaron las necesidades del usuario y la dinámica del transporte público en Barinas (rutas, desvíos y tarifas). Se documentan los requerimientos funcionales, historias de usuario y la matriz de trazabilidad. Su fase de prueba asociada son las Pruebas de Aceptación, encargadas de confirmar que el sistema resuelva los problemas reales de movilidad.
+Fase inicial donde se identificaron las necesidades del usuario. Se documentan los requerimientos funcionales, historias de usuario y la matriz de trazabilidad. Su fase de prueba asociada son las Pruebas de Aceptación, encargadas de confirmar que el sistema resuelva los problemas existentes.
 
 
 ### 2. Análisis del Sistema (System Analysis)
@@ -45,25 +45,8 @@ Definición de la arquitectura tecnológica general: estructura modular desacopl
 Especificación de bajo nivel de cada componente individual: definición de tablas y esquemas relacionales (models.py), lógica de control (views.py), validación de entradas (forms.py) y mapeo de endpoints (urls.py). Su fase de prueba correspondiente son las Pruebas Unitarias, verificando que las funciones y métodos operen correctamente de forma aislada.
 
 
-### 5. Punto de Inflexión: Codificación (Coding)
+###  Punto de Inflexión: Codificación (Coding)
 Etapa de implementación técnica donde se construyen los módulos en código Python/Django sobre Docker, aplicando estándares limpios de desarrollo y control de versiones con Git.
-
-
-### 6. Pruebas Unitarias (Unit Testing)
-Primera fase de verificación tras la codificación. Evalúa de forma aislada la lógica de los métodos de modelos, la asignación automática de perfiles por señales y las validaciones de formularios.
-
-
-### 7. Pruebas de Integración (Integration Testing)
-Comprueba el trabajo conjunto entre módulos: valida que el control de acceso por roles proteja adecuadamente las vistas, que las transacciones guarden en la base de datos dentro del contenedor y que el visor cartográfico reciba los datos esperados.
-
-
-### 8. Pruebas del Sistema (System Testing)
-Verificación de la aplicación ejecutándose de forma integral en su entorno Docker. Evalúa flujos completos como inicio de sesión, navegación de rutas según el rol y respuesta del servidor en el puerto asignado.
-
-
-### 9. Pruebas de Aceptación (User Acceptance Testing - UAT)
-Validación final frente a los objetivos iniciales del proyecto. Corrobora que la plataforma oriente al usuario de forma clara sobre el transporte de Barinas y permita consultar información vial de forma intuitiva.
-
 
 ---
 
