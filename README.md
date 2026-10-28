@@ -49,47 +49,42 @@ Especificación de bajo nivel de cada componente individual: definición de tabl
 Etapa de implementación técnica donde se construyen los módulos en código Python/Django sobre Docker, aplicando estándares limpios de desarrollo y control de versiones con Git. 
 
 
-**1. Clonar el repositorio:**
+### Despliegue Local con Docker
 
+#### 1. Clonar el repositorio:
 ```bash
-git clone [https://github.com/Joiset/proyecto_web_JOI.git](https://github.com/Joiset/proyecto_web_JOI.git)
+git clone https://github.com/Joiset/proyecto_web_JOI.git
 cd proyecto_web_JOI
-
 ```
 
-**2. Construir la imagen del proyecto:**
+#### 2. Instalar dependencias del frontend (Vite.js):
+```bash
+cd frontend
+npm install
+cd ..
+```
 
+#### 3. Construir la imagen del proyecto:
 ```bash
 docker compose build
-
 ```
 
-**3. Ejecutar migraciones de la base de datos:**
-
+#### 4. Ejecutar migraciones de la base de datos:
 ```bash
 docker compose run --rm web python manage.py migrate
-
 ```
 
-**4. Crear usuario administrador:**
-
+#### 5. Crear usuario administrador:
 ```bash
 docker compose run --rm web python manage.py createsuperuser
-
 ```
 
-**5. Iniciar el servidor:**
-
+#### 6. Iniciar el servidor:
 ```bash
 docker compose up
-
 ```
 
-**disponible en el navegador:** 
-
-```bash
- http://localhost:8000
-
-```
+Una vez iniciado el contenedor, la aplicación estará disponible en tu navegador en:  
+**http://localhost:8000**
 
 
