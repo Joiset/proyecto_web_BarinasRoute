@@ -7,6 +7,7 @@ from .models import Profile
 def create_user_profile_and_group(sender, instance, created, **kwargs):
     """
     Asigna automáticamente el perfil y el grupo por defecto al registrarse un usuario.
+    
     """
     if created:
         # Se crea el perfil asociado en la base de datos
