@@ -30,24 +30,23 @@ La metodología en V es un modelo de desarrollo secuencial donde cada fase de di
 
 ```
 ### 1. Análisis de Requisitos (Requirement Gathering)
-
-Esta etapa inicial se enfoca en recopilar, analizar y formalizar las necesidades operativas de los usuarios y las reglas de negocio del sistema, generando especificaciones funcionales, historias de usuario y matrices de trazabilidad. En BarinasRoute, esta fase consistió en identificar las fallas de información en el transporte urbano de Barinas, abordando la desorientación provocada por variantes de ruta no señalizadas (como la bifurcación entre Letra A y Letra B), el uso de paradas basadas en toponimia popular sin georreferenciación y la falta de canales directos para reportar incidentes viales. Su fase de validación vinculada corresponde a las Pruebas de Aceptación, las cuales comprueban que el software resuelva los problemas cotidianos de traslado de la ciudadanía.
+Fase inicial donde se identificaron las necesidades del usuario. Se documentan los requerimientos funcionales, historias de usuario y la matriz de trazabilidad. Su fase de prueba asociada son las Pruebas de Aceptación, encargadas de confirmar que el sistema resuelva los problemas existentes.
 
 ### 2. Análisis del Sistema (System Analysis)
 
-En esta fase se transforman los requerimientos del usuario en especificaciones técnicas formales, delimitando las fronteras del software, los flujos de interacción y las responsabilidades operativas mediante casos de uso y diagramas de flujo de datos. En el contexto de BarinasRoute, se establecieron los límites funcionales de la plataforma y el modelo de control de acceso basado en roles (RBAC), definiendo las capacidades de navegación libre para Visitantes, reporte de incidencias para Usuarios Ciudadanos, moderación de alertas viales para Gestores y administración de líneas de transporte para Administradores. Su fase de verificación asociada son las Pruebas del Sistema, encargadas de evaluar el comportamiento global e integral de la plataforma de extremo a extremo.
+Traducción de los requisitos del usuario a especificaciones técnicas y operativas del software, definiendo límites del sistema, casos de uso y diagramas de flujo. Se vincula con las Pruebas del Sistema, las cuales validan el comportamiento global de la aplicación de extremo a extremo.
 
 ### 3. Diseño de Software / Arquitectura (Software Design)
 
-Esta fase define la infraestructura estructural del proyecto, organizando la solución en capas desacopladas, estableciendo los mecanismos de persistencia y seleccionando el stack tecnológico adecuado para el despliegue. Para BarinasRoute, se diseñó una arquitectura web modular con backend en Python y Django 4.2 LTS, un entorno de empaquetado y compilación frontend con Vite.js acoplado a interfaces en Bootstrap 5, un visor cartográfico basado en Leaflet.js sobre OpenStreetMap y la contenedorización de todos los servicios mediante Docker y Docker Compose. Se vincula de forma directa con las Pruebas de Integración, cuyo propósito es certificar que la comunicación entre las capas de presentación, lógica de servidor, empaquetador de assets y base de datos opere de manera coordinada.
+Definición de la arquitectura tecnológica general: estructura modular desacoplada en Django, persistencia en base de datos relacional y contenedorización de servicios con Docker. Se asocia con las Pruebas de Integración, destinadas a comprobar la comunicación correcta entre los módulos del sistema y servicios externos.
 
 ### 4. Diseño de Módulos (Module Design)
 
-Esta etapa aborda la especificación técnica de bajo nivel para cada componente interno, formalizando la lógica de negocio, los algoritmos de procesamiento y los modelos de datos de las aplicaciones del proyecto. En BarinasRoute, esto se materializó en el diseño relacional de entidades en `models.py` para líneas, variantes, paradas y reportes de incidentes, la codificación de vistas y controladores en `views.py`, los formularios de validación y autenticación en `forms.py`, el enrutamiento interno en `urls.py` y los algoritmos de proximidad geográfica para el cálculo de paradas cercanas. Su contraparte de control son las Pruebas Unitarias, orientadas a validar que cada método, función y regla de validación responda de forma exacta y aislada.
+Especificación de bajo nivel de cada componente individual: definición de tablas y esquemas relacionales (models.py), lógica de control (views.py), validación de entradas (forms.py) y mapeo de endpoints (urls.py). Su fase de prueba correspondiente son las Pruebas Unitarias, verificando que las funciones y métodos operen correctamente de forma aislada.
 
 ### Punto de Inflexión: Codificación (Coding)
 
-Representa la etapa donde las especificaciones técnicas y los diseños previos se materializan en código fuente ejecutable, aplicando estándares limpios de desarrollo y entornos reproducibles. En BarinasRoute, la codificación se llevó a cabo integrando los módulos de Django con la compilación de scripts en Vite.js, ejecutando el aplicativo dentro de contenedores aislados de Docker y manteniendo el versionado continuo del código mediante Git y GitHub.
+Etapa de implementación técnica donde se construyen los módulos en código Python/Django sobre Docker, aplicando estándares limpios de desarrollo y control de versiones con Git. 
 
 
 **1. Clonar el repositorio:**
