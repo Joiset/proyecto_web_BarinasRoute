@@ -49,11 +49,8 @@ Esta etapa aborda la especificación técnica de bajo nivel para cada componente
 
 Representa la etapa donde las especificaciones técnicas y los diseños previos se materializan en código fuente ejecutable, aplicando estándares limpios de desarrollo y entornos reproducibles. En BarinasRoute, la codificación se llevó a cabo integrando los módulos de Django con la compilación de scripts en Vite.js, ejecutando el aplicativo dentro de contenedores aislados de Docker y manteniendo el versionado continuo del código mediante Git y GitHub.
 
-```
----
-S
 
- **1. Clonar el repositorio:**
+**1. Clonar el repositorio:**
 
 ```bash
 git clone [https://github.com/Joiset/proyecto_web_JOI.git](https://github.com/Joiset/proyecto_web_JOI.git)
