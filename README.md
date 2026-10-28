@@ -53,8 +53,7 @@ Etapa de implementación técnica donde se construyen los módulos en código Py
 
 #### 1. Clonar el repositorio:
 ```bash
-git clone https://github.com/Joiset/proyecto_web_BarinasRoute.git
-cd NuevoNombre
+git clone https://github.com/Joiset/proyecto_web_BarinasRoute
 ```
 
 #### 2. Instalar dependencias del frontend (Vite.js):
